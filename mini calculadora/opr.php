@@ -8,7 +8,9 @@ $num = $_POST['num'];
 $num2 = $_POST['num2'];
 $operacao = $_POST['opr'];
 
-if ($operacao == "+") {
+#COM IF E ELSE
+
+/*if ($operacao == "+") {
 	$soma = $num + $num2;
 	echo "Resultado da soma: $soma";
 }
@@ -24,5 +26,60 @@ else if ($operacao == "/") {
 	$div = $num / $num2;
 	echo "Resultado da divisão: $div";
 }
+else if ($operacao == "%") {
+	$mod = $num % $num2;
+	echo "Resultado da modulação: $mod";
+}
+*/
+
+#COM SWITCH CASE
+
+switch ($operacao) {
+	case "+":
+		$soma = $num + $num2;
+		echo "Resultado da soma: $soma";
+		break;
+	
+	case "-":
+		$sub = $num - $num2;
+		echo "Resultado da subtração: $sub";
+		break;
+	
+	case "*":
+		$mult = $num * $num2;
+		echo "Resultado da multiplicação: $mult";
+		break;
+
+	case "/":
+		$div = $num / $num2;
+		echo "Resultado da divisão: $div";
+		break;	
+
+	case "%":
+		$mod = $num % $num2;
+		echo "Resultado da modulação: $mod";
+		break;		
+
+	default:
+		echo "Você não inseriu um sinal válido para a procedência da operação!";
+		break;
+}
+
+
+
+
+
+
+
+
+
+
 
 ?>
+
+
+
+
+
+
+
